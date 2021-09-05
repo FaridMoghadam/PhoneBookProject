@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>@ViewData["Title"] - DashboardSite</title>
+
+    <link href="~/style.css" rel="stylesheet">
+
+
+</head>
+
+<body class="app">
+    <div id="loader">
+        <div class="spinner">  </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('fadeOut');
+            }, 300);
+        });
+    </script>
+    <div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-logo">
+                    <div class="peers ai-c fxw-nw">
+                        <div class="peer peer-greed">
+                            <a class="sidebar-link td-n"  asp-area="" asp-controller="Home" asp-action="Index">
+                                <div class="peers ai-c fxw-nw">
+                                    <div class="peer">
+                                        <div class="logo">
+                                            <img src="~/assets/static/images/logo.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="peer peer-greed">
+                                        <h5 class="lh-1 mB-0 logo-text"> مدیریت مخاطبین</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="peer">
+                            <div class="mobile-toggle sidebar-toggle">
+                                <a href="" class="td-n">
+                                    <i class="ti-arrow-circle-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="sidebar-menu scrollable pos-r">
+                    <li class="nav-item mT-30 active">
+                        <a class="sidebar-link"  asp-area="" asp-controller="Home" asp-action="Index">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-home">
+                                </i>
+                            </span>
+                            <span class="title">صفحه نخست</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="DataPhonelist" asp-action="Index">
+                            <span class="icon-holder">
+                                <i class="c-indigo-500 ti-bar-chart">
+                                </i>
+                            </span>
+                            <span class="title">مخاطبین</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sidebar-link"asp-area="" asp-controller="Departmant" asp-action="Index">
+                            <span class="icon-holder">
+                                <i class="c-indigo-500 ti-bar-chart">
+                                </i>
+                            </span>
+                            <span class="title">معاونت ها</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sidebar-link" onclick="history.back()">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-share">
+                                </i>
+                            </span>
+                            <span class="title">بازگشت</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="header navbar">
+            <div class="header-container">
+                <ul class="nav-right">
+                    <li>
+                        <a id="sidebar-toggle" class="sidebar-toggle" href="javascript:void(0);">
+                            <i class="ti-menu"> </i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <main class="main-content bgc-grey-100">
+            <div id="mainContent">
+                <div class="row gap-20 masonry pos-r">
+                    <div class="masonry-sizer col-md-6">
+                    </div>
+                    <div class="masonry-item col-12">
+                        <div class="bd bgc-white">
+                            <div class="peers fxw-nw@lg+ ai-s">
+                                <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+                                    <div class="layers">
+                                        <div class="layer w-100 mB-10">
+                                            <h6 class="lh-1"> </h6>
+                                        </div>
+                                        <div class="layer w-100">
+
+
+                                            <div class="container">
+                                                <main role="main" class="pb-3">
+                                                    @RenderBody()
+                                                </main>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+        <div>
+            <div style="line-height: 1.2em;">
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="~/vendor.js"></script>
+    <script type="text/javascript" src="~/bundle.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>

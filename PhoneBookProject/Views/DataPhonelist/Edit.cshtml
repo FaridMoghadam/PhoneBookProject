@@ -1,0 +1,146 @@
+﻿@model PhoneBookProject.Models.DataPhonelist
+
+<form method="post">
+    <input Asp-for="Id" hidden />
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-info pl-3">ویرایش مخاطب</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Fname">نام</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Fname" class="form-control" />
+                        <span asp-validation-for="Fname" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Lname">نام خانوادگی</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Lname" class="form-control" />
+                        <span asp-validation-for="Lname" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Location">آدرس</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Location" class="form-control" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Departmant">معاونت</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Departmant" class="form-control" />
+                        <span asp-validation-for="Departmant" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Division">واحد</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Division" class="form-control" />
+                        <span asp-validation-for="Division" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Position">سمت</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Position" class="form-control" />
+                        <span asp-validation-for="Position" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="PhoneNumber">تلفن</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CellPhone">تلفن همراه</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CellPhone" class="form-control" />
+                        <span asp-validation-for="CellPhone" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Description">توضیحات</label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-100" value="ثبت" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> بازگشت</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            @* Keep this empty *@
+        </div>
+
+    </div>
+
+</form>
+
+    @section Scripts{
+
+        @{ <partial name="_ValidationScriptsPartial" /> }
+
+    }
