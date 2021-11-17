@@ -1,0 +1,95 @@
+﻿@model PhoneBookProject.Models.DataPhonelist
+
+@{
+    ViewBag.Title = "حذف";
+}
+
+<form method="post" asp-action="DeletePost">
+    <input Asp-for="Id" hidden />
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- form start -->
+    <!-- form start -->
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-3">
+                <label asp-for="Fname">نام</label>
+                <input asp-for="Fname" class="form-control" placeholder="نام" disabled />
+                <span asp-validation-for="Fname" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="Lname">نام خانوادگی</label>
+                <input asp-for="Lname" class="form-control" placeholder="نام خانوادگی" disabled />
+                <span asp-validation-for="Lname" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-5">
+                <label asp-for="Location">آدرس</label>
+                <input asp-for="Location" class="form-control" placeholder="آدرس" disabled />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-3">
+                <label asp-for="ListOfDepartmant">معاونت</label>
+                <input asp-for="ListOfDepartmant" class="form-control" placeholder="معاونت" disabled />
+                <span asp-validation-for="ListOfDepartmant" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="Division">واحد</label>
+                <input asp-for="Division" class="form-control" placeholder="واحد" disabled />
+                <span asp-validation-for="Division" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="Position">سمت</label>
+                <input asp-for="Position" class="form-control" placeholder="سمت" disabled />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-3">
+                <label asp-for="PhoneNumber">تلفن</label>
+                <input asp-for="PhoneNumber" class="form-control" placeholder="تلفن" disabled />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="CellPhone">تلفن همراه</label>
+                <input asp-for="CellPhone" class="form-control" placeholder="تلفن همراه" disabled />
+                <span asp-validation-for="CellPhone" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-5">
+                <label asp-for="Description">توضیحات</label>
+                <input asp-for="Description" class="form-control" placeholder="توضیحات" disabled />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <button type="submit" class="btn btn-danger">حذف</button>
+        <button asp-action="Index" type="submit" class="btn btn-default">انصراف</button>
+    </div>
+
+</form>
+
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
+

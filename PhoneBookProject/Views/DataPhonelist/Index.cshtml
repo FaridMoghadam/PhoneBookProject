@@ -1,0 +1,104 @@
+﻿@model ReflectionIT.Mvc.Paging.IPagingList<PhoneBookProject.Models.DataPhonelist>
+
+@using ReflectionIT.Mvc.Paging
+@addTagHelper *,  ReflectionIT.Mvc.Paging
+
+@{
+    ViewBag.Title = "دفترچه تلفن";
+}
+
+
+<nav class="pagenav" style="text-align:center;">
+    @await this.Component.InvokeAsync("Pager", new { PagingList = this.Model })
+</nav>
+
+
+
+
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <a asp-controller="DataPhonelist" asp-action="Create" class="btn btn-success">
+            جـدیـد
+        </a>
+
+    </div>
+</div>
+
+
+
+@if (Model.Count() > 0)
+{
+
+    <div class="box-body">
+        <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row">
+                <div class="col-sm-12">
+                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                        <thead>
+                            <tr>
+                                <th>نام</th>
+                                <th>نام خانوادگی</th>
+                                <th>معاونت</th>
+                                <th>تلفن</th>
+                                <th>تلفن همراه</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var obj in Model)
+                            {
+                                <tr>
+                                    <td width="15%">@obj.Fname</td>
+                                    <td width="20%">@obj.Lname</td>
+                                    <td width="15%">@obj.ListOfDepartmant</td>
+                                    <td width="20%">@obj.PhoneNumber</td>
+                                    <td width="15%">@obj.CellPhone</td>
+                                    <td class="text-center">
+                                        <div class="w-100  btn-group" role="group">
+
+                                            <a asp-controller="DataPhonelist" asp-route-Id="@obj.Id" asp-action="View" class="btn btn-info">
+                                                نمایش
+                                            </a>
+
+                                            <a asp-controller="DataPhonelist" asp-route-Id="@obj.Id" asp-action="Edit" class="btn btn-warning">
+                                                ویرایش
+                                            </a>
+
+
+                                            <a asp-controller="DataPhonelist" asp-route-Id="@obj.Id" asp-action="Delete" class="btn btn-danger">
+                                                حذف
+                                            </a>
+
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                        <tfoot>
+                            <tr><th rowspan="1" colspan="1">تعداد کل</th></tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>@*<div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div>*@
+        </div>
+    </div>
+
+
+    <nav>
+        <vc:pager paging-list="@Model"/>
+    </nav>
+}
+
+else
+{
+    <p>No Data Exists.</p>
+}
+
+
+
