@@ -10235,11 +10235,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj",
+      "projectUniqueName": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-07\\PhoneBookProject\\PhoneBookProject.csproj",
       "projectName": "PhoneBookProject",
-      "projectPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj",
+      "projectPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-07\\PhoneBookProject\\PhoneBookProject.csproj",
       "packagesPath": "C:\\Users\\LapTop-1\\.nuget\\packages\\",
-      "outputPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\obj\\",
+      "outputPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-07\\PhoneBookProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
