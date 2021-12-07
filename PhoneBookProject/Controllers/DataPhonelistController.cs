@@ -22,36 +22,31 @@ namespace PhoneBookProject.Controllers
             _db = db;
         }
 
-
-
-        public IActionResult Index(int page = 1)
+        public IActionResult Index(int pageIndex = 1)
         {
-            var item = _db.DataPhonelist.AsNoTracking().OrderBy(p => p.Id);
-            var model = PagingList.Create(_db.DataPhonelist.ToList(), 10, page);
+            var item = _db.DataPhonelist.AsNoTracking().OrderBy (p => p.Id);
+            var model = PagingList.Create(_db.DataPhonelist.ToList(), 5, pageIndex);
             return View(model);
-
         }
 
 
         // Get For Create
         public IActionResult Create()
         {
-
             var DepartmantListlist = (from DepartmantList in _db.Depatmantlist
-                                    select new SelectListItem()
-                                    {
-                                        Text = DepartmantList.Name,
-                                        Value = DepartmantList.Name.ToString()
-                                    }).ToList();
+                                      select new SelectListItem()
+                                      {
+                                          Text = DepartmantList.Name,
+                                          Value = DepartmantList.Name.ToString()
+                                      }).ToList();
             DepartmantListlist.Insert(0, new SelectListItem()
             {
                 Text = "---- انتخاب کنید ----",
                 Value = string.Empty
             });
 
-
-
             ViewBag.ListOfDepartmant = DepartmantListlist;
+
             return View();
         }
 
@@ -87,17 +82,7 @@ namespace PhoneBookProject.Controllers
             {
                 return NotFound();
             }
-            var DepartmantListlist = (from DepartmantList in _db.Depatmantlist
-                                      select new SelectListItem()
-                                      {
-                                          Text = DepartmantList.Name,
-                                          Value = DepartmantList.Name.ToString()
-                                      }).ToList();
-            DepartmantListlist.Insert(0, new SelectListItem()
-            {
-                Text = "---- انتخاب کنید ----",
-                Value = string.Empty
-            });
+
 
             return View(obj);
         }

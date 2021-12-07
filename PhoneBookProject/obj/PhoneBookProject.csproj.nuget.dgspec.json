@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-11-17\\PhoneBookProject\\PhoneBookProject.csproj": {}
+    "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj": {}
   },
   "projects": {
-    "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-11-17\\PhoneBookProject\\PhoneBookProject.csproj": {
+    "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-11-17\\PhoneBookProject\\PhoneBookProject.csproj",
+        "projectUniqueName": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj",
         "projectName": "PhoneBookProject",
-        "projectPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-11-17\\PhoneBookProject\\PhoneBookProject.csproj",
+        "projectPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj",
         "packagesPath": "C:\\Users\\LapTop-1\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-11-17\\PhoneBookProject\\obj\\",
+        "outputPath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

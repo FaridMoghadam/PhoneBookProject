@@ -3,75 +3,84 @@
     ViewBag.Title = "جدید";
 }
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
 <form method="post" asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <!-- form start -->
-  
-        <div class="box-body">
-            <div class="row">
-                <div class="col-xs-3">
-                    <label asp-for="Fname">نام</label>
-                    <input asp-for="Fname" class="form-control" placeholder="نام" />
-                    <span asp-validation-for="Fname" class="text-danger"></span>
-                </div>
-                <div class="col-xs-4">
-                    <label asp-for="Lname">نام خانوادگی</label>
-                    <input asp-for="Lname" class="form-control" placeholder="نام خانوادگی" />
-                    <span asp-validation-for="Lname" class="text-danger"></span>
-                </div>
+
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-3">
+                <label asp-for="Fname">نام</label>
+                <input asp-for="Fname" class="form-control" placeholder="نام" />
+                <span asp-validation-for="Fname" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="Lname">نام خانوادگی</label>
+                <input asp-for="Lname" class="form-control" placeholder="نام خانوادگی" />
+                <span asp-validation-for="Lname" class="text-danger"></span>
             </div>
         </div>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-xs-5">
-                    <label asp-for="Location">آدرس</label>
-                    <input asp-for="Location" class="form-control" placeholder="آدرس" />
-                    <span asp-validation-for="Location" class="text-danger"></span>
-                </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-5">
+                <label asp-for="Location">آدرس</label>
+                <input asp-for="Location" class="form-control" placeholder="آدرس" />
+                <span asp-validation-for="Location" class="text-danger"></span>
             </div>
         </div>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-xs-3">
-                    <label asp-for="ListOfDepartmant">معاونت</label>
-                    <input asp-for="ListOfDepartmant" class="form-control" placeholder="آدرس" />
-                    <span asp-validation-for="ListOfDepartmant" class="text-danger"></span>
-                </div>
-                <div class="col-xs-4">
-                    <label asp-for="Division">واحد</label>
-                    <input asp-for="Division" class="form-control" placeholder="واحد" />
-                    <span asp-validation-for="Division" class="text-danger"></span>
-                </div>
-                <div class="col-xs-4">
-                    <label asp-for="Position">سمت</label>
-                    <input asp-for="Position" class="form-control" placeholder="سمت" />
-                    <span asp-validation-for="Position" class="text-danger"></span>
-                </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-3">
+                <label asp-for="ListOfDepartmant">معاونت</label>
+               <select asp-for="ListOfDepartmant"
+                        class="form-control"
+                        asp-items="@(new SelectList (ViewBag.ListOfDepartmant,"Value","Text"))">
+                </select>
+
+                <span asp-validation-for="ListOfDepartmant" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="Division">واحد</label>
+                <input asp-for="Division" class="form-control" placeholder="واحد" />
+                <span asp-validation-for="Division" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="Position">سمت</label>
+                <input asp-for="Position" class="form-control" placeholder="سمت" />
+                <span asp-validation-for="Position" class="text-danger"></span>
             </div>
         </div>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-xs-3">
-                    <label asp-for="PhoneNumber">تلفن</label>
-                    <input asp-for="PhoneNumber" class="form-control" placeholder="تلفن" />
-                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                </div>
-                <div class="col-xs-4">
-                    <label asp-for="CellPhone">تلفن همراه</label>
-                    <input asp-for="CellPhone" class="form-control" placeholder="تلفن همراه" />
-                    <span asp-validation-for="CellPhone" class="text-danger"></span>
-                </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-3">
+                <label asp-for="PhoneNumber">تلفن</label>
+                <input asp-for="PhoneNumber" class="form-control" placeholder="تلفن" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="col-xs-4">
+                <label asp-for="CellPhone">تلفن همراه</label>
+                <input asp-for="CellPhone" class="form-control" placeholder="تلفن همراه" />
+                <span asp-validation-for="CellPhone" class="text-danger"></span>
             </div>
         </div>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-xs-5">
-                    <label asp-for="Description">توضیحات</label>
-                    <input asp-for="Description" class="form-control" placeholder="توضیحات" />
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-xs-5">
+                <label asp-for="Description">توضیحات</label>
+                <input asp-for="Description" class="form-control" placeholder="توضیحات" />
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
         </div>
+    </div>
 
     <!-- /.box-body -->
 

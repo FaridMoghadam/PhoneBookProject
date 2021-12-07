@@ -8,13 +8,6 @@
 }
 
 
-<nav class="pagenav" style="text-align:center;">
-    @await this.Component.InvokeAsync("Pager", new { PagingList = this.Model })
-</nav>
-
-
-
-
 
 <div class="row">
     <div class="col-xs-12">
@@ -25,8 +18,6 @@
 
     </div>
 </div>
-
-
 
 @if (Model.Count() > 0)
 {
@@ -90,8 +81,10 @@
     </div>
 
 
-    <nav>
-        <vc:pager paging-list="@Model"/>
+
+
+    <nav class="pagenav" style="text-align:center;">
+        @await this.Component.InvokeAsync("Pager", new { PagingList = this.Model })
     </nav>
 }
 

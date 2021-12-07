@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PhoneBookProject.Data;
 using PhoneBookProject.Models;
+using ReflectionIT.Mvc.Paging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,14 +20,24 @@ namespace PhoneBookProject.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
-        {
 
-            //IEnumerable<DepartmantList> objlist = _db.Depatmantlist.Where (a=>a.Id == 2).ToList();
-            IEnumerable<DepartmantList> objlist = _db.Depatmantlist.Where(a => a.Id == 2).ToList();
-            return View(objlist);
+        public IActionResult Index(int pageIndex = 1)
+        {
+            var item = _db.DataPhonelist.AsNoTracking().OrderBy(p => p.Id);
+            var model = PagingList.Create(_db.Depatmantlist.ToList(), 10, pageIndex);
+            return View(model);
 
         }
+
+
+        //public IActionResult Index()
+        //{
+
+        //    //IEnumerable<DepartmantList> objlist = _db.Depatmantlist.Where (a=>a.Id == 2).ToList();
+        //    IEnumerable<DepartmantList> objlist = _db.Depatmantlist.Where(a => a.Id == 2).ToList();
+        //    return View(objlist);
+
+        //}
 
 
         // Get For Create -------------

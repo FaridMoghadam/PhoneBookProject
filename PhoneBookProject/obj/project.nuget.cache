@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/uMdpRB01OxOtM5RHZt4TZwgg9ZwVVCDMt+Ms6W3DHM0EM8uv2Rk/eeo4y9rCCLId0quz0UjtFB4wV0s+a+tHQ==",
+  "dgSpecHash": "+yj/fBLLHtTYWn3vxKwXxb6EFuItJcW3Y89asszbewcshi6rfe5CrpfENEwU8VH/n346bhoDdd0Be9WsILhNZw==",
   "success": true,
-  "projectFilePath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-11-17\\PhoneBookProject\\PhoneBookProject.csproj",
+  "projectFilePath": "D:\\Asp.Net Core Mvc\\PhoneBookProject\\PhoneBookProject - 2021-12-05\\PhoneBookProject\\PhoneBookProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LapTop-1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LapTop-1\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.0.0\\microsoft.aspnetcore.antiforgery.2.0.0.nupkg.sha512",

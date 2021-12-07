@@ -45,9 +45,8 @@
         <!-- Main Header -->
         <header class="main-header">
             <!-- Logo -->
-            <a href="index.html" class="logo">
+            <a asp-controller="Home" class="logo">
 
-             
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini">پنل</span>
                 <!-- logo for regular state and mobile devices -->
@@ -330,6 +329,7 @@
                         <p>فرید صباحی مقدم </p>
                         <!-- Status -->
                         <a href="#"><i class="fa fa-circle text-success"></i> آنلاین</a>
+
                     </div>
                 </div>
 
@@ -350,7 +350,7 @@
                     <li class="header">دسترسی به بخش ها</li>
                     <!-- Optionally, you can add icons to the links -->
 
-                    <li><a asp-area="" asp-controller="DataPhonelist" asp-action="Index" ><i class="fa fa-book"></i> <span>مخاطبین</span></a></li>
+                    <li><a asp-area="" asp-controller="DataPhonelist" asp-action="Index"><i class="fa fa-book"></i> <span>مخاطبین</span></a></li>
 
                     <li><a asp-area="" asp-controller="Departmant" asp-action="Index"><i class="fa fa-book"></i> <span>معاونت ها</span></a></li>
 
@@ -367,7 +367,7 @@
             <section class="content-header">
 
 
-              
+
                 <div class="box box-primary">
                     <div class="box-header with-border">
                         <h3 class="box-title">@ViewData["Title"]</h3>
@@ -382,9 +382,9 @@
                     </div><!-- /.box-body -->
                 </div>
 
-                  
 
-                
+
+
             </section>
 
             <!-- Main content -->
@@ -480,12 +480,11 @@
         immediately after the control sidebar -->
         <div class="control-sidebar-bg"></div>
     </div>
-    <!-- ./wrapper -->
-    <!-- REQUIRED JS SCRIPTS -->
-    <!-- jQuery 3 -->
-   
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-         Both of these plugins are recommended to enhance the
-         user experience. -->
+
+
+
+
 </body>
 </html>
+
+

@@ -7,21 +7,28 @@ using System.Diagnostics;
 using System.Linq;
 using ReflectionIT.Mvc.Paging;
 using System.Threading.Tasks;
+using PhoneBookProject.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace PhoneBookProject.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+
+
+        public HomeController(ApplicationDbContext db)
         {
-            _logger = logger;
+            _db = db;
         }
 
-        public IActionResult Index()
+
+        public IActionResult Index(int pageIndex = 1)
         {
-            return View();
+            var item = _db.DataPhonelist.AsNoTracking().OrderBy(p => p.Id);
+            var model = PagingList.Create(_db.DataPhonelist.ToList(), 1000, pageIndex);
+            return View(model);
         }
 
         public IActionResult Privacy()
